@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class
+		name="com.asiainfo.meo.campaign.task.app.model.entity.CampaignTaskRule"
+		table="CM_CAMPAIGN_TASK_RULE">
+		<id name="ruleId" type="long">
+			<column name="RULE_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="actionId" type="long">
+			<column name="ACTION_ID" not-null="true" />
+		</property>
+		<property name="ruleContent" type="string">
+			<column name="RULE_CONTENT" length="65535" />
+		</property>
+		<property name="ruleType" type="java.lang.Integer">
+			<column name="RULE_TYPE" />
+		</property>
+		<property name="createDate" type="java.sql.Timestamp">
+			<column name="CREATE_DATE" length="19" />
+		</property>
+		<property name="modifyDate" type="java.sql.Timestamp">
+			<column name="MODIFY_DATE" length="19" />
+		</property>
+		<property name="operatorId" type="java.sql.Timestamp">
+			<column name="OPERATOR_ID" length="19" />
+		</property>
+		<property name="sts" type="java.lang.Integer">
+			<column name="STS" />
+		</property>
+	</class>
+</hibernate-mapping>

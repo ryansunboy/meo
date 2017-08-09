@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.asiainfo.meo.campaign.profile.app.model.entity.CampaignPropertyDef" table="CM_CAMPAIGN_PROPERTY_DEF">
+  <id name="propertyKey" type="long">
+   <column name="PROPERTY_KEY"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="propertyCode" type="string">
+   <column length="128" name="PROPERTY_CODE" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="propertyName" type="string">
+   <column length="128" name="PROPERTY_NAME"/>
+  </property>
+  <property generated="never" lazy="false" name="createDate" type="java.sql.Timestamp">
+   <column length="19" name="CREATE_DATE" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="modifyDate" type="java.sql.Timestamp">
+   <column length="19" name="MODIFY_DATE"/>
+  </property>
+  <property generated="never" lazy="false" name="sts" type="java.lang.Integer">
+   <column name="STS"/>
+  </property>
+  <property generated="never" lazy="false" name="mandatory" type="int">
+   <column name="MANDATORY" not-null="true">
+    <comment>0:true 1:false</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="campaignType" type="int">
+   <column name="CAMPAIGN_TYPE" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="propertyValueType" type="java.lang.Integer">
+   <column name="PROPERTY_VALUE_TYPE" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>

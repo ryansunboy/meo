@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.asiainfo.meo.activity.business.model.entity.CmCampaignActivity" table="CM_CAMPAIGN_ACTIVITY">
+	<id name="campaignActivityId" type="long">
+		<column name="CAM_ACT_ID" />
+        <generator class="assigned" />
+    </id>
+    <property name="activityId" type="java.lang.Long">
+		<column name="ACTIVITY_ID" />
+	</property>
+	<property name="campaignNo" type="string">
+		<column name="CAMPAIGN_NO" length="128" />
+	</property>
+	<property name="doneTime" type="java.sql.Timestamp">
+		<column name="DONE_TIME" length="19" />
+	</property>
+	<property name="custId" type="java.lang.Long">
+		<column name="CUST_ID" />
+	</property>
+	<property name="actionId" type="string">
+		<column name="ACTION_ID" />
+	</property>
+
+</class>
+</hibernate-mapping>

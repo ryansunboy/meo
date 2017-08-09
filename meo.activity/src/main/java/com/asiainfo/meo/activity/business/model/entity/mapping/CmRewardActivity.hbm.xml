@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-15 10:28:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.activity.business.model.entity.CmRewardActivity" table="CM_REWARD_ACTIVITY">
+        <id name="rewardId" type="long">
+            <column name="REWARD_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="activityId" type="java.lang.Long">
+            <column name="ACTIVITY_ID" />
+        </property>
+        <property name="campaignNo" type="string">
+            <column name="CAMPAIGN_NO" length="128" />
+        </property>
+        <property name="custId" type="java.lang.Long">
+            <column name="CUST_ID" />
+        </property>
+        <property name="doneTime" type="java.sql.Timestamp">
+            <column name="DONE_TIME" length="19" />
+        </property>
+        <property name="rewardType" type="java.lang.Integer">
+            <column name="REWARD_TYPE" />
+        </property>
+        <property name="rewardValue" type="java.lang.Long">
+            <column name="REWARD_VALUE" />
+        </property>
+        <property name="rewardUnit" type="java.lang.Integer">
+            <column name="REWARD_UNIT" />
+        </property>
+        <property name="actionId" type="java.lang.Long">
+            <column name="ACTION_ID" />
+        </property>
+        <property name="taskId" type="java.lang.Long">
+            <column name="TASK_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

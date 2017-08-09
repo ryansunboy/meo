@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<sql-query name="meo.activity.getCountParticipantOfCampaignAppDownload">
+		<![CDATA[SELECT COUNT(*) AS PARTICIPANT 
+				 FROM CM_CAMPAIGN_ACTIVITY 
+				 WHERE CAMPAIGN_NO=? AND CUST_ID=? AND ACTION_ID=?  ]]> 
+	</sql-query>
+</hibernate-mapping>

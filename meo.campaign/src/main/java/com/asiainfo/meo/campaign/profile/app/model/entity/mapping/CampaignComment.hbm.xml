@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.profile.app.model.entity.CampaignComment" table="CM_CAMPAIGN_COMMENT">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="custId" type="java.lang.Long">
+            <column name="CUST_ID" />
+        </property>
+        <property name="star" type="java.lang.Integer">
+            <column name="STAR" />
+        </property>
+        <property name="comment" type="string">
+            <column name="COMMENT" length="512" />
+        </property>
+        <property name="isLike" type="java.lang.Integer">
+            <column name="IS_LIKE">
+                <comment>1:like 2: not like</comment>
+            </column>
+        </property>
+        <property name="shareChannel" type="java.lang.Integer">
+            <column name="SHARE_CHANNEL">
+                <comment>1:imint 2:facebook 3.others</comment>
+            </column>
+        </property>
+        <property name="doneTime" type="java.sql.Timestamp">
+            <column name="DONE_TIME" length="19" />
+        </property>
+        <property name="campaignNo" type="string">
+            <column name="CAMPAIGN_NO" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

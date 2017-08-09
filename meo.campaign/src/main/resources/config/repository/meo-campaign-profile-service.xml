@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="  
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd  
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.1.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+ 
+ <!-- repository -->	
+ 	<bean id="campaignTaskDetailRepository" class="com.asiainfo.meo.campaign.task.app.repository.impl.CampaignTaskDetailRepositoryImpl"/>
+    <bean id="campaignRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.CampaignRepositoryImpl"/>
+    <bean id="campaignPropertyDefRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.CampaignPropertyDefRepositoryImpl"/>
+    <bean id="campaignPropertyRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.CampaignPropertyRepositoryImpl"/>
+    <bean id="hotCampaignRankRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.HotCampaignRankRepositoryImpl"/>
+    <bean id="rewardActivityRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.RewardActivityRepositoryImpl"/>
+    <bean id="agreementRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.AgreementRepositoryImpl"/>
+    <bean id="campaignTaskRelRepository" class="com.asiainfo.meo.campaign.task.app.repository.impl.CampaignTaskRelRepositoryImpl"/>
+    <bean id="campaignTaskRepository" class="com.asiainfo.meo.campaign.task.app.repository.impl.CampaignTaskRepositoryImpl"/>
+    <bean id="taskParamInstanceRepository" class="com.asiainfo.meo.campaign.task.app.repository.impl.TaskParamInstanceRepositoryImpl"/>
+    <bean id="campaignTaskRuleRelRepository" class="com.asiainfo.meo.campaign.task.app.repository.impl.CampaignTaskRuleRelRepositoryImpl"/>
+    <bean id="campaignTaskRuleRepository" class="com.asiainfo.meo.campaign.task.app.repository.impl.CampaignTaskRuleRepositoryImpl"/>
+    
+    <bean id="campaignPriceRelRepository" class="com.asiainfo.meo.campaign.profile.app.repository.impl.CampaignPriceRelRepositoryImpl" />
+    
+ <!-- BO -->
+    <bean id="campaignProfileBO" class="com.asiainfo.meo.campaign.profile.app.bo.impl.CampaignProfileBOImpl"/>
+    <bean id="campaignTaskBO" class="com.asiainfo.meo.campaign.task.app.bo.impl.CampaignTaskBOImpl"/>
+	<bean id="campaignPserviceBO" class="com.asiainfo.meo.campaign.service.provide.impl.CampaignPserviceBOImpl"/>
+	<bean id="campaignRserviceBO" class="com.asiainfo.meo.campaign.service.require.impl.CampaignRserviceBOImpl"/>
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-15 11:02:02 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.activity.business.model.entity.CmCampaignActivitySummary" table="CM_CAMPAIGN_ACTIVITY_SUMMARY">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="actionId" type="java.lang.Long">
+            <column name="ACTION_ID" />
+        </property>
+        <property name="summaryType" type="java.lang.Integer">
+            <column name="SUMMARY_TYPE">
+                <comment>1;SUMMARY COUNT</comment>
+            </column>
+        </property>
+        <property name="summaryValue" type="java.lang.Long">
+            <column name="SUMMARY_VALUE" />
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="CREATE_DATE" length="19" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS" />
+        </property>
+        <property name="campaignNo" type="string">
+            <column name="CAMPAIGN_NO" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

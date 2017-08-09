@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.profile.app.model.entity.CampaignProperty" table="CM_CAMPAIGN_PROPERTY">
+        <id name="propertyId" type="long">
+            <column name="PROPERTY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="propertyKey" type="long">
+            <column name="PROPERTY_KEY" not-null="true" />
+        </property>
+        <property name="propertyValue" type="string">
+            <column name="PROPERTY_VALUE" length="256" />
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="CREATE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+        <property name="campaignId" type="java.lang.Long">
+            <column name="CAMPAIGN_ID" />
+        </property>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS" />
+        </property>
+    </class>
+</hibernate-mapping>

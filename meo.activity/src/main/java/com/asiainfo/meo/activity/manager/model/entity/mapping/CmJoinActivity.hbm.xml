@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-15 10:28:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.activity.manager.model.entity.CmJoinActivity" table="CM_JOIN_ACTIVITY">
+        <id name="activityId" type="long">
+            <column name="ACTIVITY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="custId" type="java.lang.Long">
+            <column name="CUST_ID" />
+        </property>
+        <property name="doneTime" type="java.sql.Timestamp">
+            <column name="DONE_TIME" length="19" />
+        </property>
+        <property name="actionId" type="java.lang.Long">
+            <column name="ACTION_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

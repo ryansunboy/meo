@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.asiainfo.meo</groupId>
+	<artifactId>meo.campaign</artifactId>
+	<packaging>jar</packaging>
+
+	<name>campaign</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.asiainfo.meo</groupId>
+			<artifactId>meo.core</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.asiainfo.meo</groupId>
+			<artifactId>meo.partner</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.asiainfo.meo</groupId>
+			<artifactId>meo.system</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<parent>
+		<groupId>com.asiainfo</groupId>
+		<artifactId>meo</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../meo/pom.xml</relativePath>
+	</parent>
+</project>

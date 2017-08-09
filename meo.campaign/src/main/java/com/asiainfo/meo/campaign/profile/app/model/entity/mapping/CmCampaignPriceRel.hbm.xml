@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-27 11:29:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.profile.app.model.entity.CampaignPriceRel" table="CM_CAMPAIGN_PRICE_REL">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="campaignId" type="java.lang.Long">
+            <column name="CAMPAIGN_ID" />
+        </property>
+        <property name="priceId" type="long">
+            <column name="PRICE_ID" not-null="true">
+                <comment>&#181;&#165;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="contractId" type="java.lang.Long">
+            <column name="CONTRACT_ID" />
+        </property>
+        <property name="validDate" type="java.sql.Timestamp">
+            <column name="VALID_DATE" length="10" />
+        </property>
+        <property name="expiredDate" type="java.sql.Timestamp">
+            <column name="EXPIRED_DATE" length="19" />
+        </property>
+        <property name="sts" type="int">
+            <column name="STS" not-null="true" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<sql-query name="meo.campaign.getNextVersion">
+	<![CDATA[SELECT MAX(VERSION) FROM CM_CAMPAIGN WHERE CAMPAIGN_NO =?]]> 
+	</sql-query>
+	<sql-query name="meo.campaign.getProductIdByCampaignId">
+		<![CDATA[SELECT param_instance.PARAM_VALUE as PRODUCT_ID 
+					FROM CM_CAMPAIGN campaign 
+					LEFT JOIN CM_CAMPAIGN_TASK_REL campaign_task_rel 
+                		on campaign.CAMPAIGN_ID = campaign_task_rel.CAMPAIGN_ID
+        			LEFT JOIN CM_CAMPAIGN_TASK campaign_task 
+                		on campaign_task_rel.DEST_TASK_ID = campaign_task.TASK_ID
+        			LEFT JOIN SYS_ACTION_PARAM_DEF param_def
+                		on campaign_task.ACTION_ID = param_def.ACTION_ID
+        			LEFT JOIN CM_TASK_PARAM_INSTANCE param_instance
+               			on param_def.PARAM_ID = param_instance.PARAM_ID
+					WHERE   campaign.STS = 1 AND        					
+        					campaign.CAMPAIGN_STS = 2 AND        
+        					campaign_task_rel.REL_TYPE_ID = 1 AND
+        					param_def.PARAM_NAME = 'PRODUCT_ID' AND
+        					campaign.EXPIRED_DATE > NOW() AND
+        					campaign.CAMPAIGN_ID = ? AND
+        					campaign.CAMPAIGN_TYPE = ?]]>
+	</sql-query>
+	<sql-query name="meo.campaign.getAppDownLoad">
+	<![CDATA[SELECT t2.PROPERTY_VALUE FROM cm_campaign t, cm_campaign_activity t1, cm_campaign_property t2 WHERE t.CAMPAIGN_TYPE = 1 AND t1.CUST_ID = ? AND t1.CAMPAIGN_NO = t.CAMPAIGN_NO AND t.CAMPAIGN_ID = t2.CAMPAIGN_ID AND t2.PROPERTY_KEY = 1002 LIMIT ?, ?]]> 
+	</sql-query>
+	<sql-query name="meo.campaign.getAppDownLoadTotalSize">
+	<![CDATA[SELECT COUNT(t2.PROPERTY_VALUE) FROM cm_campaign t, cm_campaign_activity t1, cm_campaign_property t2 WHERE t.CAMPAIGN_TYPE = 1 AND t1.CUST_ID = ? AND t1.CAMPAIGN_NO = t.CAMPAIGN_NO AND t.CAMPAIGN_ID = t2.CAMPAIGN_ID AND t2.PROPERTY_KEY = 1002]]> 
+	</sql-query>
+</hibernate-mapping>
+

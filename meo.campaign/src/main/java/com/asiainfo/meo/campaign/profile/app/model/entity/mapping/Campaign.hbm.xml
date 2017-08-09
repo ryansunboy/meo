@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-11 19:31:42 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.profile.app.model.entity.Campaign" table="CM_CAMPAIGN">
+        <id name="campaignId" type="long">
+            <column name="CAMPAIGN_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="campaignNo" type="string">
+            <column name="CAMPAIGN_NO" length="128" />
+        </property>
+        <property name="campaignName" type="string">
+            <column name="CAMPAIGN_NAME" length="128" not-null="true" />
+        </property>
+        <property name="campaignType" type="java.lang.Integer">
+            <column name="CAMPAIGN_TYPE">
+                <comment>campaign type</comment>
+            </column>
+        </property>
+        <property name="campaignBeginDate" type="java.sql.Timestamp">
+            <column name="CAMPAIGN_BEGIN_DATE" length="19" />
+        </property>
+        <property name="campaignEndDate" type="java.sql.Timestamp">
+            <column name="CAMPAIGN_END_DATE" length="19" />
+        </property>
+        <property name="agreementId" type="java.lang.Long">
+            <column name="AGREEMENT_ID" />
+        </property>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS" />
+        </property>
+        <property name="iconUrl" type="string">
+            <column name="ICON_URL" length="256" />
+        </property>
+        <property name="validDate" type="java.sql.Timestamp">
+            <column name="VALID_DATE" length="19" />
+        </property>
+        <property name="expiredDate" type="java.sql.Timestamp">
+            <column name="EXPIRED_DATE" length="19" />
+        </property>
+        <property name="categoryId" type="java.lang.Integer">
+            <column name="CATEGORY_ID" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="512" />
+        </property>
+        <property name="partnerId" type="java.lang.Long">
+            <column name="PARTNER_ID" />
+        </property>
+        <property name="participant" type="java.lang.Integer">
+            <column name="PARTICIPANT" />
+        </property>
+        <property name="operatorId" type="java.lang.Long">
+            <column name="OPERATOR_ID" />
+        </property>
+        <property name="campaignSts" type="java.lang.Integer">
+            <column name="CAMPAIGN_STS">
+                <comment>1.publish 2.active 3.suspend 4.renew 5.expired</comment>
+            </column>
+        </property>
+        <property name="campaignUrl" type="string">
+            <column name="CAMPAIGN_URL" length="256" />
+        </property>
+        <property name="isEdit" type="java.lang.Integer">
+            <column name="IS_EDIT">
+                <comment>0:yes&#163;&#168;&#212;&#202;&#208;&#237;&#208;&#222;&#184;&#196;&#163;&#169;
+                1:no&#163;&#168;&#178;&#187;&#212;&#202;&#208;&#237;&#208;&#222;&#184;&#196;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="version" type="string">
+            <column name="VERSION" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

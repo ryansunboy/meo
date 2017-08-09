@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.task.app.model.entity.CampaignQuiz" table="CM_CAMPAIGN_QUIZ">
+        <id name="quizId" type="long">
+            <column name="QUIZ_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="quizName" type="string">
+            <column name="QUIZ_NAME" length="256" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="512" />
+        </property>
+        <property name="campaignId" type="long">
+            <column name="CAMPAIGN_ID" not-null="true" />
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="CREATE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+        <property name="quizUrl" type="string">
+            <column name="QUIZ_URL" length="256" not-null="true" />
+        </property>
+        <property name="findAnswerUrl" type="string">
+            <column name="FIND_ANSWER_URL" length="256" />
+        </property>
+        <property name="quesCount" type="int">
+            <column name="QUES_COUNT" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

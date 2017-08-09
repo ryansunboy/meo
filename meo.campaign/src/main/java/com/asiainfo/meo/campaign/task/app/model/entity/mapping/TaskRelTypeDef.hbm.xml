@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.task.app.model.entity.TaskRelTypeDef" table="CM_TASK_REL_TYPE_DEF">
+        <id name="relTypeId" type="int">
+            <column name="REL_TYPE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="relTypeName" type="string">
+            <column name="REL_TYPE_NAME" length="128" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="512" not-null="true" />
+        </property>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="CREATE_DATE" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

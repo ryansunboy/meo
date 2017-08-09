@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-9 13:11:58 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.profile.app.model.entity.Agreement" table="CM_AGREEMENT">
+        <id name="agreementId" type="long">
+            <column name="AGREEMENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS" />
+        </property>
+        <property name="validDate" type="java.sql.Timestamp">
+            <column name="VALID_DATE" length="19" />
+        </property>
+        <property name="expiredDate" type="java.sql.Timestamp">
+            <column name="EXPIRED_DATE" length="19" />
+        </property>
+        <property name="contractId" type="java.lang.Long">
+            <column name="CONTRACT_ID" />
+        </property>
+        <property name="campaignName" type="string">
+            <column name="CAMPAIGN_NAME" length="128" />
+        </property>
+        <property name="campaignUrl" type="string">
+            <column name="CAMPAIGN_URL" length="256" />
+        </property>
+        <property name="campaignType" type="java.lang.Integer">
+            <column name="CAMPAIGN_TYPE" />
+        </property>
+        <property name="iconUrl" type="string">
+            <column name="ICON_URL" length="256" />
+        </property>
+        <property name="inventory" type="java.lang.Long">
+            <column name="INVENTORY" />
+        </property>
+        <property name="partnerId" type="java.lang.Long">
+            <column name="PARTNER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

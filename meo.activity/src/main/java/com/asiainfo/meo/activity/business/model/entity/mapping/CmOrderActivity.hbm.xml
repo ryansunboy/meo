@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-15 10:28:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.activity.business.model.entity.CmOrderActivity" table="CM_ORDER_ACTIVITY">
+        <id name="orderId" type="long">
+            <column name="ORDER_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="activityId" type="java.lang.Long">
+            <column name="ACTIVITY_ID" />
+        </property>
+        <property name="entityId" type="long">
+            <column name="ENTITY_ID" not-null="true" />
+        </property>
+        <property name="entityType" type="int">
+            <column name="ENTITY_TYPE" not-null="true">
+                <comment>1.customer 2.partner 3:imint</comment>
+            </column>
+        </property>
+        <property name="productId" type="long">
+            <column name="PRODUCT_ID" not-null="true" />
+        </property>
+        <property name="doneTime" type="java.sql.Timestamp">
+            <column name="DONE_TIME" length="19" not-null="true" />
+        </property>
+        <property name="resourceId" type="java.lang.Long">
+            <column name="RESOURCE_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

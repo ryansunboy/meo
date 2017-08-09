@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-20 14:45:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.task.app.model.entity.CampaignLimit" table="CM_CAMPAIGN_LIMIT">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="campaignId" type="long">
+            <column name="CAMPAIGN_ID" not-null="true" />
+        </property>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS">
+                <comment>1.publish 2.active 3.suspend 4.renew 5.expired</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="512" />
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="CREATE_DATE" length="19" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+        <property name="limitType" type="java.lang.Integer">
+            <column name="LIMIT_TYPE" />
+        </property>
+        <property name="limitValue" type="java.lang.Long">
+            <column name="LIMIT_VALUE" />
+        </property>
+        <property name="limitUnit" type="java.lang.Integer">
+            <column name="LIMIT_UNIT" />
+        </property>
+    </class>
+</hibernate-mapping>

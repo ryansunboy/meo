@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.asiainfo.meo.campaign.profile.app.model.entity.CampaignTaskDetail" table="CM_CAMPAIGN_TASK_DETAIL">
+        <id name="detailId" type="java.lang.Long">
+            <column name="DETAIL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="currentTaskId" type="java.lang.Long">
+            <column name="CURRENT_TASK_ID" not-null="true" />
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="CREATE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="modifyDate" type="java.sql.Timestamp">
+            <column name="MODIFY_DATE" length="19" />
+        </property>
+        <property name="campaignNo" type="string">
+            <column name="CAMPAIGN_NO" length="128" />
+        </property>
+        <property name="sts" type="java.lang.Integer">
+            <column name="STS" />
+        </property>
+        <property name="nextTaskId" type="java.lang.Long">
+            <column name="NEXT_TASK_ID" />
+        </property>
+        <property name="custId" type="java.lang.Long">
+            <column name="CUST_ID" />
+        </property>
+    </class>
+</hibernate-mapping>
